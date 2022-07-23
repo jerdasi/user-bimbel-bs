@@ -1,0 +1,16 @@
+[
+    {
+        "id":1,
+        "nama":"Si Bejo",
+        "paket":"Paket Private SMA",
+        "ulasan":"Si Bejo sebelum bergabung di Bimbel Beta Smart, merupakan anak yang mendapat peringkat 10 keatas, kini sudah mulai berubah dan mendapat  benefit mengikuti kelas di Bimbel Beta Smart. Kini sudah aktif mendapat peringkat 5 besar!!!",
+        "image": "../../images/bejo.png"
+    },
+    {
+        "id":2,
+        "nama":"Si Bejo",
+        "paket":"Paket Rekomendasi",
+        "ulasan":"Si Bejo sebelum bergabung di Bimbel Beta Smart, merupakan anak yang mendapat peringkat 10 keatas, kini sudah mulai berubah dan mendapat  benefit mengikuti kelas di Bimbel Beta Smart. Kini sudah aktif mendapat peringkat 5 besar!!!",
+        "image": "../../images/bejo.png"
+    }
+]

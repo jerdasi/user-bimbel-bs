@@ -1,0 +1,32 @@
+[
+    {
+        "id":1,
+        "title":"Tentor Berpengalaman dan Profesional",
+        "res":"Tentor merupakan lulusan terbaik hingga seorang dosen"
+    },
+    {
+        "id":2,
+        "title":"Metode Pembelajaran Simpel",
+        "res":"Anak didik akan diajarkan cara menyelesaikan permasalahan dengan konsep dasar tanpa proses berberlit belit"
+    },
+    {
+        "id":3,
+        "title":"Gratis Wisata dan Study Travel di Berau",
+        "res":"Program ini bertujuan untuk melakukan refreshing setiap anak didik agar tidak terjadi burnout dalam belajar. Program ini diadakan setiap bulan"
+    },
+    {
+        "id":4,
+        "title":"Lingkungan Belajar Nyaman dan Aman",
+        "res":"Tersedia fasilitas pendukung proses belajar mengajar seperti proyektor, speaker dan kelas yang dilengkapi Air Conditioner (AC)"
+    },
+    {
+        "id":5,
+        "title":"Gratis Training Motivasi dan Spiritual",
+        "res":"Training bertujuan untuk menumbuhkan sikap yang optimis dan tetap berlandaskan kehidupan beragama"
+    },
+    {
+        "id":6,
+        "title":"Hadiah Bagi Siswa Berprestasi",
+        "res":"Hadiah akan diberikan bagi siswa yang mendapatkan ranking 1 - 3 selama 3 kali berturut-turut sebagai motivasi dalam belajar dan berprestasi"
+    }
+]

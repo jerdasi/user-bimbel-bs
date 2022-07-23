@@ -1,0 +1,28 @@
+[
+    {
+        "title": "Rekomendasi",
+        "icon": "../../images/insignia.png",
+        "cName": "red"
+    },
+    {
+        "title": "Belum Sekolah",
+        "icon": "../../images/book.svg",
+        "cName": "red"
+    },
+    {
+        "title": "SD",
+        "icon": "../../images/book.svg",
+        "cName": "red"
+    },
+    {
+        "title": "SMP",
+        "icon": "../../images/book.svg",
+        "cName": "red"
+    },
+    {
+        "title": "SMA",
+        "icon": "../../images/book.svg",
+        "cName": "red"
+    }
+    
+]
