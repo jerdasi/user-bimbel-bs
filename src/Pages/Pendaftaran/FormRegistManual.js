@@ -96,14 +96,14 @@ function FormRegistManual(props) {
                             Paket Bimbingan Belajar
                         </span>
                     </h3>
-                    <div className="w-full flex overflow-x-auto overflow-y-auto">
+                    <div className="w-full flex h-64 flex-col flex-wrap gap-4 overflow-x-auto overflow-y-auto">
                         {paket
                             .filter((kelas) => kelas.id_jenjang === props.kelas)
                             .map((paketKelas) => {
                                 return (
                                     <div
                                         key={paketKelas.id}
-                                        className="w-full border-2 rounded-md border-red-600 p-4 cursor-pointer hover:scale-90 ease-in-out duration-300 py-2 mx-1 group"
+                                        className="w-3/4 md:w-1/3 h-full border-2 rounded-md border-red-600 p-4 cursor-pointer hover:scale-90 ease-in-out duration-300 group relative"
                                     >
                                         <div className="flex justify-between py-2 gap-2">
                                             <img
@@ -122,33 +122,39 @@ function FormRegistManual(props) {
                                             </li>
                                             <li>
                                                 Pertemuan{" "}
-                                                {paketKelas.jumlah_pertemuan}
+                                                {paketKelas.jumlah_pertemuan * 4}
                                                 x/bulan
                                             </li>
                                             <li>
-                                                {paketKelas.harga}
+                                                Harga: Rp. {paketKelas.harga},-
                                             </li>
                                             <li>
                                                 Biaya Pendaftaran 1x untuk
                                                 selamanya
                                             </li>
+                                            <li>
+                                                Persyaratan yang disarankan: 
+                                                {paketKelas.riwayat_nilai}
+                                            </li>
                                         </ul>
-                                        <button
-                                            onClick={() => {
-                                                setIdKelas(paketKelas.id);
-                                            }}
-                                            className={[
-                                                "w-full flex p-2 px-6 justify-between items-center border-red-600 border-2 rounded-lg group-hover:bg-merah-bs group-hover:text-white",
-                                                idKelas === paketKelas.id
-                                                    ? "bg-merah-bs text-white"
-                                                    : "bg-white text-black",
-                                            ].join(" ")}
-                                        >
-                                            <TbLocation />
-                                            <span className="mx-auto">
-                                                Pilih Paket Ini
-                                            </span>
-                                        </button>
+                                        <div className="absolute bottom-0 left-0 w-full p-2">
+                                            <button
+                                                onClick={() => {
+                                                    setIdKelas(paketKelas.id);
+                                                }}
+                                                className={[
+                                                    "w-full flex p-2 px-6 justify-between items-center border-red-600 border-2 rounded-lg group-hover:bg-merah-bs group-hover:text-white",
+                                                    idKelas === paketKelas.id
+                                                        ? "bg-merah-bs text-white"
+                                                        : "bg-white text-black",
+                                                ].join(" ")}
+                                            >
+                                                <TbLocation />
+                                                <span className="mx-auto">
+                                                    Pilih Paket Ini
+                                                </span>
+                                            </button>
+                                        </div>
                                     </div>
                                 );
                             })}

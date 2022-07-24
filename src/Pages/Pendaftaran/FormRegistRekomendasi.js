@@ -161,7 +161,7 @@ function FormRegistRekomendasi() {
         tempat: "",
         tanggal_lahir: moment().format("yyyy-MM-DD"),
         alamat: "",
-        id_jenjang: 0,
+        id_jenjang: 2,
         asal_sekolah: "",
         fotoPeserta: null,
         nama_ayah: "",
@@ -181,12 +181,11 @@ function FormRegistRekomendasi() {
         let form_data = new FormData();
 
         for (let key in formValues) {
-            //console.log(key, formValues[key])
             form_data.append(key, formValues[key]);
         }
-        getRekomendasi();
-        setRekomendasi(getRekomendasi().id);
-        setIdJenjang(filterJenjang);
+        // getRekomendasi();
+        // setRekomendasi(getRekomendasi().id);
+        // setIdJenjang(filterJenjang);
 
         axios
             .post(
@@ -199,7 +198,8 @@ function FormRegistRekomendasi() {
                 // const id = getRekomendasi().id;
                 // console.log(id)
                 console.log(filterJenjang)
-                console.log(res.data.data.id)
+                console.log(res.data)
+                console.log(getRekomendasi())
                 navigate(`/kelas-rekomendasi`, {
                     state: {
                         id: res.data.data.id,
@@ -469,12 +469,12 @@ function FormRegistRekomendasi() {
                                     className="p-2 border border-abu-bs rounded-md"
                                     onChange={(e) => {
                                         setFilterJenjang(
-                                            parseFloat(e.target.value)
+                                            parseInt(e.target.value)
                                         );
-                                        // setFormValues({
-                                        //     ...formValues,
-                                        //     id_jenjang:parseInt(e.target.value)
-                                        // })
+                                        setFormValues({
+                                            ...formValues,
+                                            id_jenjang:parseInt(e.target.value)
+                                        })
                                     }}
                                 >
                                     {jenjang.map((item) => (
