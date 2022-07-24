@@ -9,6 +9,7 @@ import PaketBimbingan from './Pages/PaketBimbingan';
 import KelasRekomendasi from './Pages/Pendaftaran/KelasRekomendasi';
 import ReviewPendaftaran from './Pages/Pendaftaran/ReviewPendaftaran';
 import RincianPembayaran from './Pages/Pembayaran/RincianPembayaran'
+import Testimoni from './Pages/Testimoni';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route exact path='/' element={<LandingPage/>}></Route>
+          <Route exact path='/testimoni' element={<Testimoni />}></Route>
           <Route exact path='/faq' element={<Faq/>}></Route>
           <Route exact path='/paket-bimbingan' element={<PaketBimbingan/>}/>
           <Route exact path='/kelas-rekomendasi' element={<KelasRekomendasi/>}/>

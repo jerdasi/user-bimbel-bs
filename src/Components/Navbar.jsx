@@ -13,7 +13,7 @@ function Navbar() {
 
 
     return (
-        <div className=' w-full h-24 flex justify-between items-center bg-antique mx-auto px-14 md:px-20 '>
+        <div className=' w-full h-24 flex justify-between items-center bg-antique mx-auto px-4 md:px-20 '>
             <img src={logo} alt="" className='' />
             <ul className='hidden md:flex'>
                 <a href='/' className='text-black no-underline'><li className='p-4 hover:text-merah-bs hover:font-bold cursor-pointer'
@@ -24,10 +24,10 @@ function Navbar() {
                 {/* <li><button className='py-2 px-4 mt-3 bg-merah-bs text-white rounded-lg font-bold'>Daftar</button></li> */}
             </ul>
             <div onClick={handleNav} className='block md:hidden'>
-                {!nav ? <AiOutlineClose size={30} /> : <AiOutlineMenu size={30} />}
+                {nav ? <AiOutlineClose size={30} /> : <AiOutlineMenu size={30} />}
 
             </div>
-            <div className={!nav ? 'fixed left-0 top-0 w-[50%] h-full border-r border-r-gray-400 bg-antique ease-in-out duration-500 md:hidden' : 'fixed left-[-100%]'} >
+            <div className={nav ? 'fixed left-0 top-0 w-[50%] h-full border-r border-r-gray-400 bg-antique ease-in-out duration-500 md:hidden' : 'fixed left-[-100%]'} >
                 <img src={logo} alt="" className='p-4' />
                 <ul className='uppercase p-4'>
                     <a href='/' className='text-black no-underline'><li className='p-4 border-b border-gray-300 hover:text-merah-bs hover:font-bold'>Beranda</li></a>

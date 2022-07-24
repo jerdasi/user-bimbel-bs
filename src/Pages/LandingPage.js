@@ -31,7 +31,7 @@ function LandingPage() {
 
     return (
         <>
-            <div className="w-full p-16 md:p-16 mx-auto bg-white">
+            <div className="w-full p-4 md:p-16 mx-auto bg-white">
                 <div className="grid md:grid-cols-2">
                     <div className="flex flex-col justify-center">
                         <h1 className="text-merah-bs font-bold text-4xl py-2 md:text-5xl sm:py-1">
@@ -83,9 +83,9 @@ function LandingPage() {
                     Pilih sendiri atau ikuti rekomendasi kami
                 </p>
                 <div className="w-full overflow-x-auto h-56">
-                    <div className="w-full h-[90%] flex flex-col flex-wrap gap-2 justify-start overflow-x-auto ">
+                    <div className="w-full h-[90%] flex flex-col flex-wrap gap-2 justify-start overflow-x-auto">
                         <div
-                            className="w-1/2 md:w-1/6 h-full border-2 text-center border-gray-900 rounded-md items-center cursor-pointer hover:scale-x-105 ease-in-out duration-300 justify-center bg-white relative group"
+                            className="w-1/2 md:w-1/6 h-full border-2 text-center border-gray-900 rounded-md items-center cursor-pointer hover:scale-x-105 ease-in-out duration-300 justify-center bg-white relative group ml-4"
                             onClick={toPaketBimbingan}
                         >
                             <img
@@ -183,7 +183,7 @@ function LandingPage() {
                 <div className="md:flex">
                     {testimoni.map((item, index) => {
                         return (
-                            <div className="w-1/2 lg:w-1/3 bg-white p-4 my-2 rounded-md mr-2">
+                            <div className="w-2/3 lg:w-1/3 bg-white p-4 my-2 rounded-md mr-2">
                                 <img
                                     src={`${process.env.REACT_APP_API}/${item.foto}`}
                                     className="mx-auto w-24 h-auto"
