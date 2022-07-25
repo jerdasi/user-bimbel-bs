@@ -35,19 +35,18 @@ function KelasRekomendasi() {
             .then((res) => setPaket(res.data.data))
     }, [])
     return (
-        <div className='p-16'>
-            <div className='w-full  md:w-[70%]'>
+        <div className='p-4 md:p-16'>
+            <div className='w-full md:w-[70%]'>
                 <h1 className='font-bold text-5xl'><span className='text-merah-bs'>Gabung</span> Bersama Kami dan
-                    <span className='text-merah-bs'>Garansi 7 Hari* </span> Percobaan
+                    <span className='text-merah-bs'> Garansi 7 Hari* </span> Percobaan
                 </h1>
-                <p>Percayakan masa depan anak anda bersama kami. Ikuti masa percobaan selama 7 hari dan apabila merasa
-                    tidak terbantu ajukan pengembalian dana</p>
+                <p className='text-justify mt-2'>Percayakan masa depan anak anda bersama kami. Ikuti masa percobaan selama 7 hari dan apabila merasa tidak terbantu, ajukan pengembalian dana</p>
             </div>
-            <div>
+            <div className='md:mt-4'>
                 <h2 className='text-2xl font-bold'>Rekomendasi Kelas</h2>
-                <p>Berdasarkan data yang kamu berikan, kami melakukan analisis untuk memberikan kamu rekomendasi paket bimbingan belajar agar kamu tidak bingung untuk memilih yah! Pilih atau Abaikan dan Tetap Semangat Belajar nya ya!
+                <p className='text-justify md:mb-4'>Berdasarkan data yang kamu berikan, kami melakukan analisis untuk memberikan kamu rekomendasi paket bimbingan belajar agar kamu tidak bingung untuk memilih yah! Kamu boleh pilih hasil rekomendasi ini ataupun yang lainnya dan Tetap Semangat Belajar nya ya!
                 </p>
-                <div className='p-2 mr-14 rounded-md border-red-600 border-2 md:w-1/3 md:mr-14 py-14'>
+                <div className='p-2 rounded-md border-red-600 border-2 w-full md:w-1/3 relative md:flex md:flex-col md:justify-start md:h-64'>
                     <div className='flex justify-between py-2 gap-2'>
                         <img src={logo} className='px-2'/> <h2
                         className='text-lg md:text-md md:px-2 mx-auto font-bold'>{paketRekom.nama_paket}</h2>
@@ -60,20 +59,23 @@ function KelasRekomendasi() {
                         <li>Biaya Pendaftaran 1x untuk selamanya</li>
                     </ul>
 
-                    <button
-                        onClick={() => setSelectPaket(paketRekom.id)}
-                        className={['w-full flex  p-2  px-6 justify-between items-center border-red-600 border-2 rounded-lg ', selectPaket === paketRekom.id ? 'bg-merah-bs text-white' : 'bg-white text-black'].join(" ")}>
-                        <TbLocation/><span className='mx-auto'>Pilih Kelas Ini</span></button>
+                    <div className='absolute bottom-0 left-0 p-2 w-full'>
+                        <button
+                            onClick={() => setSelectPaket(paketRekom.id)}
+                            className={['w-full flex p-2 px-6 justify-between items-center border-red-600 border-2 rounded-lg ', selectPaket === paketRekom.id ? 'bg-merah-bs text-white' : 'bg-white text-black'].join(" ")}>
+                            <TbLocation/><span className='mx-auto'>Pilih Kelas Ini</span>
+                        </button>
+                    </div>
                 </div>
             </div>
             <div className='w-full'>
                 <h2 className='text-2xl py-4 font-bold'>Kelas Lainnya</h2>
-                <div className='w-full flex overflow-x-auto'>
+                <div className='w-full flex flex-col flex-wrap h-64 gap-4 overflow-x-auto'>
                     {pilihanPaket.map((item) => {
                         return (
                             <div key={item.id}
-                                 className='w-full md:w-[1/3] p-2 border-2 rounded-md border-red-600 mx-2 cursor-pointer '>
-                                <div className='flex justify-between py-2 gap-2'>
+                                 className='w-3/4 md:w-1/3 h-full p-2 border-2 rounded-md border-red-600 cursor-pointer relative'>
+                                <div className='flex justify-between pb-2 gap-2'>
                                     <img src={logo} className='w-[60px]'/>
                                     <h4 className='text-sm font-bold py-2'> {item.nama_paket} </h4>
                                 </div>
@@ -83,10 +85,13 @@ function KelasRekomendasi() {
                                     <li>Pertemuan {item.jumlah_pertemuan}x/minggu</li>
                                     <li>Biaya Pendaftaran 1x untuk selamanya</li>
                                 </ul>
-                                <button
-                                    onClick={() => setSelectPaket(item.id)}
-                                    className={['w-full flex  p-2  px-6 justify-between items-center border-red-600 border-2 rounded-lg ', selectPaket === item.id ? 'bg-merah-bs text-white' : 'bg-white text-black'].join(" ")}>
-                                    <TbLocation/><span className='mx-auto'>Pilih Kelas Ini</span></button>
+                                <div className="w-full absolute bottom-0 left-0 p-2">
+                                    <button
+                                        onClick={() => setSelectPaket(item.id)}
+                                        className={['w-full flex  p-2  px-6 justify-between items-center border-red-600 border-2 rounded-lg ', selectPaket === item.id ? 'bg-merah-bs text-white' : 'bg-white text-black'].join(" ")}>
+                                        <TbLocation/><span className='mx-auto'>Pilih Kelas Ini</span>
+                                    </button>
+                                </div>
                             </div>
                         )
                     })}

@@ -465,8 +465,8 @@ function FormRegistRekomendasi() {
                                 </label>
                                 <br />
                                 <select
-                                    name=""
-                                    className="p-2 border border-abu-bs rounded-md"
+                                    name="jenjang-pendidikan"
+                                    className="w-full p-2 border border-abu-bs rounded-md"
                                     onChange={(e) => {
                                         setFilterJenjang(
                                             parseInt(e.target.value)
@@ -498,7 +498,7 @@ function FormRegistRekomendasi() {
                                     Semester 1 <span className="text-merah-bs">*</span>
                                 </label>
                                 <div className="flex w-full md:gap-8 flex-wrap md:flex-nowrap">
-                                    <div className="md:w-1/2">
+                                    <div className="w-full md:w-1/2">
                                         <label className="text-md font-light py-1">
                                             Matematika <span className="text-merah-bs">*</span>
                                         </label>

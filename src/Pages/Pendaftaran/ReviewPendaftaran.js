@@ -64,53 +64,53 @@ function ReviewPendaftaran() {
     axios.get(`${process.env.REACT_APP_API}/hari-jam`).then(res => setHariJam(res.data.data))
   }, [])
   return (
-    <div className='p-16'>
+    <div className='p-4 md:p-16'>
 
-      <h1 className='text-2xl md:text-5xl font-bold'><span className='text-merah-bs'>Review</span> Pendaftaran</h1>
+      <h1 className='text-5xl font-bold'><span className='text-merah-bs'>Review</span> Pendaftaran</h1>
       <p>Ayo pastikan terlebih dahulu data yang telah diisi, agar informasi nya valid yah!</p>
 
       <h3 className='text-3xl font-bold py-4'>Informasi Calon Peserta Didik</h3>
       <div className='w-full md:flex justify-start'>
-        <div className='w-1/3 p-2 border-2 border-red-600 rounded-md max-h-72'>
-          <img src={`${process.env.REACT_APP_API}/${review.foto}`} className='p-2 md:w-[210px] md:h-[220px]  mx-auto' />
+        <div className='w-full md:w-1/3 p-2 border-2 border-red-600 rounded-md max-h-72'>
+          <img src={`${process.env.REACT_APP_API}/${review.foto}`} className='p-2 md:w-[210px] md:h-[220px] mx-auto' />
           <button className='flex  p-2 w-full bg-merah-bs text-white md:text-lg rounded-md my-2'><BsSearch size={20} className='my-1' /> <span className='mx-auto'>Preview</span></button>
 
         </div>
-        <div className='px-16'>
-          <div>
-            <h5 className='text-lg'>Nama Lengkap</h5>
+        <div className='mt-4 md:px-16'>
+          <div className='mb-2'>
+            <h5 className='text-lg font-bold'>Nama Lengkap</h5>
             <span className='font-light'>{review.nama}</span>
           </div>
-          <div>
-            <h5 className='text-lg'>Tempat, Tanggal Lahir</h5>
+          <div className='mb-2'>
+            <h5 className='text-lg font-bold'>Tempat, Tanggal Lahir</h5>
             <span className='font-light'>{review.tempat} {review.tanggal_siswa}</span>
           </div>
-          <div>
-            <h5 className='text-lg'>Alamat</h5>
+          <div className='mb-2'>
+            <h5 className='text-lg font-bold'>Alamat</h5>
             <span className='font-light'>{review.alamat}</span>
           </div>
-          <div>
-            <h5 className='text-lg'>Asal Sekolah</h5>
+          <div className='mb-2'>
+            <h5 className='text-lg font-bold'>Asal Sekolah</h5>
             <span className='font-light'>{review.asal_sekolah}</span>
           </div>
-          <div>
-            <h5 className='text-lg'>Nama Ayah</h5>
+          <div className='mb-2'>
+            <h5 className='text-lg font-bold'>Nama Ayah</h5>
             <span className='font-light'>{review.nama_ayah}</span>
           </div>
-          <div>
-            <h5 className='text-lg'>Nama Ibu</h5>
+          <div className='mb-2'>
+            <h5 className='text-lg font-bold'>Nama Ibu</h5>
             <span className='font-light'>{review.nama_ibu}</span>
           </div>
-          <div>
-            <h5 className='text-lg'>Telepon Ayah</h5>
+          <div className='mb-2'>
+            <h5 className='text-lg font-bold'>Telepon Ayah</h5>
             <span className='font-light'>{review.telepon_ayah}</span>
           </div>
-          <div>
-            <h5 className='text-lg'>Telepon Ibu</h5>
+          <div className='mb-2'>
+            <h5 className='text-lg font-bold'>Telepon Ibu</h5>
             <span className='font-light'>{review.telepon_ibu}</span>
           </div>
-          <div>
-            <h5 className='text-lg'>Telepon Anak</h5>
+          <div className='mb-2'>
+            <h5 className='text-lg font-bold'>Telepon Anak</h5>
             <span className='font-light'>{review.telepon_anak}</span>
           </div>
         </div>
@@ -135,12 +135,12 @@ function ReviewPendaftaran() {
 
         <div className='py-6'>
           <h2 className='font-bold text-xl md:text-2xl'>Pilihan <span className='text-merah-bs'>Grup Bimbingan </span></h2>
-          <div className='flex gap-2'>
+          <div className='flex gap-2 h-64 flex-col flex-wrap overflow-x-auto disabled'>
             {grup.filter(item => item.id_paket === id_paket).map((item) => {
               return (
                 <div
                   key={item.id}
-                  className='rounded-md border-2 border-red-600 p-4 w-full md:w-1/3 cursor-pointer'>
+                  className={['rounded-md border-2 border-red-600 p-4 w-full md:w-1/3 cursor-pointer h-full', item.kuota == 0? "hidden" : "block"]}>
                   <div className='flex justify-between'>
                     <img src={logo} /> <h2 className='text-sm md:text-lg mx-auto'>Grup Bimbingan</h2>
                   </div>
@@ -156,10 +156,8 @@ function ReviewPendaftaran() {
                         ...pendaftaran,
                         id_grup: item.id
                       })
-  
-                      console.log(item.id)
                     }}
-                    className={['w-full flex  p-2  px-6 justify-between items-center border-red-600 border-2 rounded-lg', item.id === pendaftaran.id_grup ? 'bg-merah-bs text-white' : 'bg-white text-black'].join(" ")}><TbLocation /><span className='mx-auto'>Pilih Gup Ini</span></button>
+                    className={['w-full flex p-2 px-6 justify-between items-center border-red-600 border-2 rounded-lg', item.id === pendaftaran.id_grup ? 'bg-merah-bs text-white' : 'bg-white text-black'].join(" ")}><TbLocation /><span className='mx-auto'>Pilih Gup Ini</span></button>
                 </div>
               )
 
@@ -173,13 +171,13 @@ function ReviewPendaftaran() {
             name='setuju'
             onChange={() => setCek('setuju')}
           />Saya setuju untuk mengikuti segala aturan dan ketentuan yang berlaku di Bimbingan Belajar Beta Smart
-          <div className='flex gap-2'>
-            <button className='w-1/2  mt-1 p-2  px-6 justify-between items-center border-2 border-gray-600 font-bold rounded-md' onClick={(e) => {
+          <div className='flex flex-wrap md:flex-nowrap gap-2'>
+            <button className='w-full md:w-1/2 mt-1 p-2 px-6 justify-between items-center border-2 border-gray-600 font-bold rounded-md' onClick={(e) => {
               navigate("/paket-bimbingan")
             }}>Kembali</button>
             <button
               onClick={(e) => handleDaftar(e)}
-              className='w-1/2 mt-1 p-2  px-6 justify-between items-center text-white font-bold bg-merah-bs rounded-md'>Lanjutkan dan Bayar </button>
+              className='w-full md:w-1/2 mt-1 p-2 px-6 justify-between items-center text-white font-bold bg-merah-bs rounded-md'>Lanjutkan dan Bayar </button>
           </div>
         </div>
 
