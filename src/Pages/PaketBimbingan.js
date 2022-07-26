@@ -11,12 +11,14 @@ function PaketBimbingan() {
     const [title, setTitle] = useState("");
     const [akro, setAkro] = useState("");
     const [kelas, setKelas] = useState("");
+    const [deskripsi, setDeskripsi] = useState("");
 
     const _handleSelected = (item) => {
         setSelected(item.akronim);
         setTitle(item.nama_jenjang);
         setAkro(item.akronim);
         setKelas(item.id);
+        setDeskripsi(item.deskripsi);
     };
 
     useEffect(() => {
@@ -105,7 +107,12 @@ function PaketBimbingan() {
             <div>
                 {selected === 0 && <FormRegistRekomendasi />}
                 {selected != 0 && (
-                    <FormRegistManual title={title} akro={akro} kelas={kelas} />
+                    <FormRegistManual
+                        title={title}
+                        akro={akro}
+                        kelas={kelas}
+                        deskripsi={deskripsi}
+                    />
                 )}
             </div>
         </div>

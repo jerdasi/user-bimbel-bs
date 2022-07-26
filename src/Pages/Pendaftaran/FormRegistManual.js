@@ -79,14 +79,15 @@ function FormRegistManual(props) {
                 Kelas <span className="text-merah-bs">{props.title}</span>
             </h2>
             <p className="text-sm text-justify">
-                Bimbingan Belajar bagi anak {props.title} bertujuan untuk
+                {props.deskripsi}
+                {/* Bimbingan Belajar bagi anak {props.title} bertujuan untuk
                 membantu siswa {props.akro} dapat belajar dengan efektif dan
                 efisien, mencapai perkembangan optimal dan mengembangkan
                 kebiasaan belajar yang baik dalam menguasai pengetahuan,
                 keterampilan serta menyiapkan untuk melanjutkan pendidikan pada
                 tingkat yang lebih tinggi. Dengan mengikuti Bimbingan Kelas ini,
                 anak didik akan diajarkan metode / cara yang cepat, efisien
-                dalam menyelesaikan soal - soal yang ada.
+                dalam menyelesaikan soal - soal yang ada. */}
             </p>
             <div>
                 <div>
@@ -117,12 +118,11 @@ function FormRegistManual(props) {
                                         </div>
 
                                         <ul className="w-full text-sm md:h-[150px] ">
-                                            <li>
-                                                {paketKelas.deskripsi}
-                                            </li>
+                                            <li>{paketKelas.deskripsi}</li>
                                             <li>
                                                 Pertemuan{" "}
-                                                {paketKelas.jumlah_pertemuan * 4}
+                                                {paketKelas.jumlah_pertemuan *
+                                                    4}
                                                 x/bulan
                                             </li>
                                             <li>
@@ -133,7 +133,7 @@ function FormRegistManual(props) {
                                                 selamanya
                                             </li>
                                             <li>
-                                                Persyaratan yang disarankan: 
+                                                Persyaratan yang disarankan:
                                                 {paketKelas.riwayat_nilai}
                                             </li>
                                         </ul>

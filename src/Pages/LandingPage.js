@@ -183,15 +183,19 @@ function LandingPage() {
                 <div className="md:flex">
                     {testimoni.map((item, index) => {
                         return (
-                            <div className="w-2/3 lg:w-1/3 bg-white p-4 my-2 rounded-md mr-2">
+                            <div className="w-2/3 lg:w-1/3 bg-white p-4 my-2 rounded-md mr-2 flex flex-col justify-between">
                                 <img
                                     src={`${process.env.REACT_APP_API}/${item.foto}`}
                                     className="mx-auto w-24 h-auto"
                                 />
-                                <h1 className="text-xl font-bold text-center">
-                                    {item.nama} - {item.nama_paket}
-                                </h1>
-                                <p className="text-left">{item.deskripsi}</p>
+                                <div>
+                                    <h1 className="text-xl font-bold text-center">
+                                        {item.nama} - {item.nama_paket}
+                                    </h1>
+                                    <p className="text-left">
+                                        {item.deskripsi}
+                                    </p>
+                                </div>
                             </div>
                         );
                     })}
