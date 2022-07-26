@@ -15,7 +15,7 @@ function Navbar() {
     return (
         <div className='w-full h-24 flex justify-between items-center bg-antique mx-auto px-4 md:px-20'>
             <img src={logo} alt="" className='' />
-            <ul className='hidden md:flex'>
+            <ul className='hidden md:flex text-2xl'>
                 <a href='/' className='text-black no-underline'><li className='p-4 hover:text-merah-bs hover:font-bold cursor-pointer'
                 >Beranda</li> </a>
                 <a href='/' className='text-black no-underline'><li className='p-4 hover:text-merah-bs hover:font-bold'>Testimoni</li></a>

@@ -27,7 +27,7 @@ function RincianPembayaran() {
                 <p className='text-xl'>Ayo pastikan terlebih dahulu data yang telah diisi, agar informasi nya valid yah!</p>
 
 
-                <div className='md:flex md:items-center md:h-[40vh] mt-4'>
+                <div className='md:flex md:items-center md:h-[50vh] mt-4'>
                     <div className='h-full p-2 mr-14 rounded-md border border-black md:w-3/4 md:mr-14'>
                         <div className='flex justify-between py-4'>
                             <img src={logo} className='px-2' /> 
@@ -44,7 +44,7 @@ function RincianPembayaran() {
                     </div>
 
                     <div className='pt-8 w-full'>
-                        <div className='mb-12 pb-8'>
+                        <div className='mb-12 pb-8 '>
                             <h4 className='text-xl md:text-xl py-2'>Pembayaran : <span className='font-bold text-merah-bs'>1 Bulan</span></h4>
                             <h4 className='text-xl md:text-xl py-2'>Biaya Paket Bimbingan/Bulan : <span className='font-bold text-merah-bs'>Rp. {rincian.harga},-</span></h4>
                             <h4 className='text-xl md:text-xl py-2'>Biaya Pendaftaran :<span className='font-bold text-merah-bs'> Rp. 200000,-</span></h4>
