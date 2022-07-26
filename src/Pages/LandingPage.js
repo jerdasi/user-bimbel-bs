@@ -42,7 +42,7 @@ function LandingPage() {
                             <span className="text-black">More Than </span>{" "}
                             Quantity
                         </h3>
-                        <p className="text-justify my-4">
+                        <p className="text-justify my-4 md:text-xl">
                             Merupakan Bimbingan Belajar berbasis Private atau
                             Reguler yang berdiri di Berau, Kalimantan Timur
                             sejak 27 Agustus 2016. Dengan metode pembelajaran{" "}
@@ -56,7 +56,7 @@ function LandingPage() {
                         </p>
                         <div className="md:flex md:gap-2">
                             <a href="#pilih_kelas" className="w-full">
-                                <button className="w-full p-2 bg-merah-bs rounded-md text-white mx-1 mb-1 md:mb-0 border-2 border-merah-bs hover:border-black">
+                                <button className="w-full md:text-lg p-2 bg-merah-bs rounded-md text-white mx-1 mb-1 md:mb-0 border-2 border-merah-bs hover:border-black">
                                     Pilih Kelas
                                 </button>
                             </a>
@@ -65,7 +65,7 @@ function LandingPage() {
                                 to="/paket-bimbingan"
                                 className="text-black no-underline hover:text-white w-full"
                             >
-                                <button className="w-full p-2 rounded-md border-2 border-red-600 mx-1 text-merah-bs hover:bg-merah-bs hover:text-white">
+                                <button className="w-full md:text-lg p-2 rounded-md border-2 border-red-600 mx-1 text-merah-bs hover:bg-merah-bs hover:text-white hover:border-black">
                                     Rekomendasi Kelas
                                 </button>
                             </Link>
@@ -75,11 +75,11 @@ function LandingPage() {
                 </div>
             </div>
             <div
-                className="w-full p-4 md:px-10 md:py-16 mx-auto bg-antique"
+                className="w-full p-4 md:px-16 md:py-16 mx-auto bg-antique"
                 id="pilih_kelas"
             >
                 <h1 className="font-bold text-3xl">Daftar dan Mulai Belajar</h1>
-                <p className="pb-2">
+                <p className="pb-2 md:text-xl">
                     Pilih sendiri atau ikuti rekomendasi kami
                 </p>
                 <div className="w-full overflow-x-auto h-56">
@@ -93,7 +93,7 @@ function LandingPage() {
                                 className="w-[90px] mx-auto pt-4"
                             />
                             <div className="absolute bottom-0 left-0 group-hover:bg-merah-bs group-hover:text-white w-full p-2 flex items-center justify-center rounded-b-md">
-                                <h4 className="text-sm">Rekomendasi</h4>
+                                <h4 className="text-sm md:text-lg">Rekomendasi</h4>
                             </div>
                         </div>
                         {jenjang.map((item) => {
@@ -108,7 +108,7 @@ function LandingPage() {
                                         className="w-[90px] mx-auto pt-4"
                                     />
                                     <div className="absolute bottom-0 left-0 group-hover:bg-merah-bs group-hover:text-white w-full p-2 flex items-center justify-center rounded-b-md">
-                                        <h4 className="text-sm">
+                                        <h4 className="text-sm md:text-lg">
                                             {item.nama_jenjang}
                                         </h4>
                                     </div>
@@ -118,15 +118,15 @@ function LandingPage() {
                     </div>
                 </div>
             </div>
-            <div className="bg-white p-4 md:px-10 md:py-16 mx-auto">
-                <h1 className="font-bold text-3xl text-center py-4">
+            <div className="bg-white p-4 md:px-16 md:py-16 mx-auto">
+                <h1 className="font-bold text-3xl text-center py-4 md:text-4xl">
                     Kenapa Harus Bimbel{" "}
-                    <span className="text-merah-bs">Beta Smart</span> ?
+                    <span className="text-merah-bs md:text-4xl">Beta Smart</span> ?
                 </h1>
                 <div className=" mx-auto grid md:grid-cols-2">
                     <img src={whyus}></img>
                     <div>
-                        <p className="text-center">
+                        <p className="text-center md:text-lg">
                             Beta Smart sebagai penyedia jasa bimbingan belajar,
                             menawarkan beberapa keuntungan yang dapat membantu
                             anak didik dapat belajar dengan baik dan menjadi
@@ -140,11 +140,11 @@ function LandingPage() {
                                         return (
                                             <div className="w-full border-2 border-red-500 rounded-md my-2  bg-merah-bs items-center gap-2">
                                                 <div className="py-1 px-2 text-white">
-                                                    <h3 className="text-sm md:text-sm">
+                                                    <h3 className="text-sm md:text-lg">
                                                         {item.title}
                                                     </h3>
                                                 </div>
-                                                <div className="bg-white p-2 rounded-sm h-[210px] md:h-[150px] text-sm">
+                                                <div className="bg-white p-2 rounded-sm h-[210px] md:h-[150px] text-sm md:text-lg">
                                                     {item.res}
                                                 </div>
                                             </div>
@@ -158,11 +158,11 @@ function LandingPage() {
                                         return (
                                             <div className="w-full border-2 border-red-500 rounded-md my-2  bg-merah-bs items-center ">
                                                 <div className="py-1 px-2 text-white ">
-                                                    <h3 className="text-sm md:text-sm">
+                                                    <h3 className="text-sm md:text-lg">
                                                         {item.title}
                                                     </h3>
                                                 </div>
-                                                <div className="bg-white p-2 rounded-sm h-[210px] md:h-[150px] text-sm">
+                                                <div className="bg-white p-2 rounded-sm h-[210px] md:h-[150px] text-sm md:text-lg">
                                                     {item.res}
                                                 </div>
                                             </div>
@@ -174,8 +174,9 @@ function LandingPage() {
                 </div>
             </div>
 
-            <div className="p-4 md:px-10 md:py-16 mx-auto bg-antique">
-                <h1 className="text-3xl font-bold">Kisah Sukses </h1>
+            <div className="p-4 md:px-10 md:py-16 mx-auto bg-antique"
+            id="testimoni">
+                <h1 className="text-3xl md:text-4xl font-bold">Kisah Sukses </h1>
                 <p>
                     Bergabung dengan Beta Smart bukan pilihan yang salah. Ikuti
                     jejak mereka!
@@ -201,8 +202,8 @@ function LandingPage() {
                     })}
                 </div>
                 <div className="flex gap-4">
-                    <BsArrowLeft size={30} />
-                    <BsArrowRight size={30} />
+                    <BsArrowLeft size={30} className='cursor-pointer'/>
+                    <BsArrowRight size={30} className='cursor-pointer'/>
                 </div>
             </div>
         </>

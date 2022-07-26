@@ -88,12 +88,12 @@ function ReviewPendaftaran() {
             <h1 className="text-5xl font-bold">
                 <span className="text-merah-bs">Review</span> Pendaftaran
             </h1>
-            <p>
+            <p className="md:text-lg py-2">
                 Ayo pastikan terlebih dahulu data yang telah diisi, agar
                 informasi nya valid yah!
             </p>
 
-            <h3 className="text-3xl font-bold py-4">
+            <h3 className="text-4xl font-bold py-8">
                 Informasi Calon Peserta Didik
             </h3>
             <div className="w-full md:flex justify-start">
@@ -109,48 +109,48 @@ function ReviewPendaftaran() {
                 </div>
                 <div className="mt-4 md:px-16">
                     <div className="mb-2">
-                        <h5 className="text-lg font-bold">Nama Lengkap</h5>
-                        <span className="font-light">{review.nama}</span>
+                        <h5 className="text-lg md:text-xl font-bold">Nama Lengkap</h5>
+                        <span className="font-light md:text-lg">{review.nama}</span>
                     </div>
                     <div className="mb-2">
-                        <h5 className="text-lg font-bold">
+                        <h5 className="text-lg md:text-xl font-bold">
                             Tempat, Tanggal Lahir
                         </h5>
-                        <span className="font-light">
+                        <span className="font-light md:text-lg">
                             {review.tempat} {review.tanggal_siswa}
                         </span>
                     </div>
                     <div className="mb-2">
-                        <h5 className="text-lg font-bold">Alamat</h5>
-                        <span className="font-light">{review.alamat}</span>
+                        <h5 className="text-lg md:text-xl font-bold">Alamat</h5>
+                        <span className="font-light md:text-lg">{review.alamat}</span>
                     </div>
                     <div className="mb-2">
-                        <h5 className="text-lg font-bold">Asal Sekolah</h5>
-                        <span className="font-light">
+                        <h5 className="text-lg md:text-xl font-bold">Asal Sekolah</h5>
+                        <span className="font-light md:text-lg">
                             {review.asal_sekolah}
                         </span>
                     </div>
                     <div className="mb-2">
-                        <h5 className="text-lg font-bold">Nama Ayah</h5>
-                        <span className="font-light">{review.nama_ayah}</span>
+                        <h5 className="text-lg md:text-xl font-bold">Nama Ayah</h5>
+                        <span className="font-light md:text-lg">{review.nama_ayah}</span>
                     </div>
                     <div className="mb-2">
-                        <h5 className="text-lg font-bold">Nama Ibu</h5>
-                        <span className="font-light">{review.nama_ibu}</span>
+                        <h5 className="text-lg md:text-xl font-bold">Nama Ibu</h5>
+                        <span className="font-light md:text-lg">{review.nama_ibu}</span>
                     </div>
                     <div className="mb-2">
-                        <h5 className="text-lg font-bold">Telepon Ayah</h5>
-                        <span className="font-light">
+                        <h5 className="text-lg md:text-xl font-bold">Telepon Ayah</h5>
+                        <span className="font-light md:text-lg">
                             {review.telepon_ayah}
                         </span>
                     </div>
                     <div className="mb-2">
-                        <h5 className="text-lg font-bold">Telepon Ibu</h5>
-                        <span className="font-light">{review.telepon_ibu}</span>
+                        <h5 className="text-lg  md:text-xl font-bold">Telepon Ibu</h5>
+                        <span className="font-light md:text-lg">{review.telepon_ibu}</span>
                     </div>
                     <div className="mb-2">
-                        <h5 className="text-lg font-bold">Telepon Anak</h5>
-                        <span className="font-light">
+                        <h5 className="text-lg md:text-xl font-bold">Telepon Anak</h5>
+                        <span className="font-light md:text-lg">
                             {review.telepon_anak}
                         </span>
                     </div>
@@ -164,13 +164,13 @@ function ReviewPendaftaran() {
                 <div className="p-2 mr-14 rounded-md border-red-600 border-2 w-full md:w-1/3 md:mr-14 pb-14 h-[350px]">
                     <div className="flex justify-between md:pt-8 pb-6">
                         <img src={logo} className="px-2" />{" "}
-                        <h2 className="text-md md:text-lg md:px-2 mx-auto">
+                        <h2 className="text-md md:text-lg md:px-2 mx-auto font-bold">
                             {paket.nama_paket}
                         </h2>
                     </div>
 
-                    <p className="p-2 text-md">{paket.deskripsi}</p>
-                    <ul className="">
+                    <p className="p-2 text-md ">{paket.deskripsi}</p>
+                    <ul className="p-2">
                         <li>Kapasitas Kelas Hingga 20 Orang/pertemuan</li>
                         <li>
                             Harga Terjangkau hanya Rp. {paket.harga},-/bulan
@@ -201,12 +201,12 @@ function ReviewPendaftaran() {
                                     >
                                         <div className="flex justify-between">
                                             <img src={logo} />{" "}
-                                            <h2 className="text-sm md:text-lg mx-auto">
+                                            <h2 className="text-sm md:text-lg mx-auto font-bold">
                                                 Grup Bimbingan
                                             </h2>
                                         </div>
                                         <div className="block py-2">
-                                            <p className="px-1">
+                                            <p className="px-1 ">
                                                 Nama Grup : {item.nama_grup}
                                                 <p> Kuota : {item.kuota}</p>
                                             </p>
