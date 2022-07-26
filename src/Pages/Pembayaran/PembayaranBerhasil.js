@@ -1,9 +1,15 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import berhasil from '../../Assets/Images/pembayaran_berhasil.png'
 
 
+
 function PembayaranBerhasil() {
+  useEffect(() =>{
+    window.location.assign('/pembayaran-berhasil')
+  }, [])
+  
   return (
+
     <div className='bg-white h-max p-16 my-10 justify-center items-center text-center place-items-center'>
         
         <img src={berhasil} className='mx-auto '/>
