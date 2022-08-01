@@ -477,11 +477,18 @@ function FormRegistRekomendasi() {
                                         })
                                     }}
                                 >
-                                    {jenjang.map((item) => (
-                                        <option value={item.id}>
-                                            {item.nama_jenjang}
-                                        </option>
-                                    ))}
+                                   {
+                                        jenjang.map( item => {
+                                            let count = paket.filter(p => p.id_jenjang == item.id).length
+                                            if (count > 2){
+                                                return(
+                                                    <option>{item.nama_jenjang}</option>
+                                                )
+                                            }
+                                        })
+                                   }
+
+
                                 </select>
                             </div>
                             {/* <div>
