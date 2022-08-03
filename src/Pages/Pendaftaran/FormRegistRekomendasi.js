@@ -13,7 +13,7 @@ function FormRegistRekomendasi() {
     const [paket, setPaket] = useState([]);
     const [rekomendasi, setRekomendasi] = useState(0);
     const [filterJenjang, setFilterJenjang] = useState(0);
-    const [idJenjang, setIdJenjang] = useState("");
+    const [idJenjang, setIdJenjang] = useState(0);
     const [nilai, setNilai] = useState([
         { matematika: 0, indo: 0, ipa: 0 },
         { matematika: 0, indo: 0, ipa: 0 },
@@ -161,7 +161,7 @@ function FormRegistRekomendasi() {
         tempat: "",
         tanggal_lahir: moment().format("yyyy-MM-DD"),
         alamat: "",
-        id_jenjang: 2,
+        id_jenjang: 0,
         asal_sekolah: "",
         fotoPeserta: null,
         nama_ayah: "",
@@ -476,13 +476,15 @@ function FormRegistRekomendasi() {
                                             id_jenjang:parseInt(e.target.value)
                                         })
                                     }}
+                                    defaultValue={formValues.id_jenjang}
                                 >
+                                    <option value={0}>Pilih Salah Satu</option>
                                    {
                                         jenjang.map( item => {
                                             let count = paket.filter(p => p.id_jenjang == item.id).length
                                             if (count > 2){
-                                                return(
-                                                    <option>{item.nama_jenjang}</option>
+                                                return (
+                                                    <option value={item.id}>{item.nama_jenjang}</option>
                                                 )
                                             }
                                         })
